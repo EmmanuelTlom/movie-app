@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@0,400;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Texturina:ital,wght@0,400;0,700;1,100&display=swap');
+
+body {
+  margin: 0;
+  background-color: #373b69;
+  font-family: 'Texturina', sans-serif ;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header{
+  background-color: #373b69;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.logo{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.search{
+  background-color:#393e8a ;
+  border: 2px solid #373b69;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  color: #f4f4f4;
+}
+
+.search:active{
+  outline: none;
+}
+
+.search::placeholder{
+  color: white;
+}
+
+.root{
+  display: flex;
+  flex-direction: column;
+}
+
+.app-con{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  grid-gap: 1.3rem;
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+.movies{
+  width: 100%;
+  background-color: #373b69;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.movies img{
+  max-width: 100%;
+  width: 100%;
+}
+
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.over{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  overflow: scroll;
+  background-color: white;
+  padding: 0.5rem;
+  transform: translateX(102%);
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.movies:hover .over{
+  transform: translateX(0);
+
+
+}
+
+.tag{
+  background-color: #393e8a;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.tag.green{
+  color: rgb(20, 194, 20);
+}
+
+.tag.orange{
+  color: orange;
+
+}
+
+.tag.red{
+  color: red;
+}
+
+@media (max-width :800px){
+  .app-con{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search{
+    border-radius: 30px;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+    color: #f4f4f4;
+  }
+
+  .logo{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media (max-width :500px){
+  .app-con{
+    grid-template-columns: 1fr;
+  }
+}
